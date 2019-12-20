@@ -1,0 +1,8 @@
+﻿DELETE FROM QAGATE_1_EventData;
+--DELETE FROM QAGATE_1_KeyenceData;
+--DELETE FROM Kogame_Data;
+--DELETE FROM QAGATE_1_MainTable;
+--DELETE FROM QAGATE_1_Reference;
+--DELETE FROM QAGATE_1_Cycle
+--DELETE FROM QAGATE_1_NombrePiece
+--DELETE FROM QAGATE_1_ArchiveTempsCycle;

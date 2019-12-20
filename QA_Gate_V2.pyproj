@@ -1,0 +1,115 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>72c67d4f-5a0e-4cb3-ab1e-0e1fc5e0d962</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>main.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>QA_Gate_V2</Name>
+    <RootNamespace>QA_Gate_V2</RootNamespace>
+    <SuppressConfigureTestFrameworkPrompt>true</SuppressConfigureTestFrameworkPrompt>
+    <InterpreterId>Global|PythonCore|3.7-32</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="extraction_donnees.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="extraction_kogame.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="main.py" />
+    <Compile Include="modify_password_page.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="module1.py" />
+    <Compile Include="module2.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="module3.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="module4.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="module5.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="module6.py" />
+    <Compile Include="module7.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="password_page.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="processus_page_jour.py" />
+    <Compile Include="processus_page_of.py" />
+    <Compile Include="settings_page.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sha256.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SQL_Cursor.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="start_page.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="screen_settings_main.py" />
+    <Compile Include="syntax.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Image\" />
+    <Folder Include="Query\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Image\62971-gear-icon.png" />
+    <Content Include="Image\62971_gear_icon_Ebs_icon.ico" />
+    <Content Include="Image\gear.png" />
+    <Content Include="Image\icon.png" />
+    <Content Include="Image\jtekt_logo.ico" />
+    <Content Include="Image\jtekt_logo.png" />
+    <Content Include="Image\keyence_logo.png" />
+    <Content Include="Image\Logo_QA_Gate_4.0.ico" />
+    <Content Include="Image\Mitutoyo_logo.svg.png" />
+    <Content Include="Query\Avancement.sql" />
+    <Content Include="Query\Bekido.sql" />
+    <Content Include="Query\Chart_Keyence.sql" />
+    <Content Include="Query\Chokko.sql" />
+    <Content Include="Query\Event.sql" />
+    <Content Include="Query\OF.sql" />
+    <Content Include="Query\Process_Complet.sql" />
+    <Content Include="Query\Prévision.sql" />
+    <Content Include="Query\Query_Delete_Data.sql" />
+    <Content Include="Query\Query_Get_Data_TXT.sql" />
+    <Content Include="Query\Query_Nbr_OK.sql" />
+    <Content Include="Query\Query_Tables_Toutes.sql" />
+    <Content Include="Query\Query_Valeur_Kogame_Hauteur_Avec_OF.sql" />
+    <Content Include="Query\Rebut.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.6-32" />
+    <InterpreterReference Include="Global|PythonCore|3.7-32" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
