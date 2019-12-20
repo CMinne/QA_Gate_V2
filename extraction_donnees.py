@@ -21,7 +21,7 @@ import babel.numbers
 
 
 global PATH_FOLDER_TEMPLATE
-PATH_FOLDER_TEMPLATE = '//SERV14/Public_new/IE/Public/Public 4.0/QA Gate 4.0/Rapport production QA Gate 4.0/Rapport_Template/Rapport_prod_template.xlsx'
+PATH_FOLDER_TEMPLATE = '//SERV14/Public_new/IE/Public/Public 4.0/QA Gate 4.0/Rapport production QA Gate 4.0/Rapport_Template/Rapport_prod_template.xlsm'
 global PATH_FOLDER_PROD
 PATH_FOLDER_PROD = r'\\SERV14\Public_new\IE\Public\Public 4.0\QA Gate 4.0\Rapport production QA Gate 4.0\Rapport_Prod\Rapport_prod_'
 
@@ -557,8 +557,9 @@ class ExtractionQAPage(tk.Frame):
             j=2                                                                                     # Démarrage ligne 2
             k=2
 
-            self.excel = win32.gencache.EnsureDispatch('Excel.Application')                         # Utilisation d'Excel
+            self.excel = win32.Dispatch('Excel.Application')                                        # Utilisation d'Excel
             self.wb = self.excel.Workbooks.Open(PATH_FOLDER_TEMPLATE)                               # Eciture dans :
+
 
             ws = self.wb.Worksheets("Données Production")                                            # Utilisation de la WorkSheet "Données"
             ws2 = self.wb.Worksheets("Données Evenements")
@@ -661,10 +662,10 @@ class ExtractionQAPage(tk.Frame):
 
             if(firstOF == lastOF):
                 self.excel.Visible = True                                                           # Affichage Excel
-                self.wb.SaveAs(PATH_FOLDER_PROD + str(firstOF) + '_'+ dt_string + '.xlsx')          # Sauvegarde
+                self.wb.SaveAs(PATH_FOLDER_PROD + str(firstOF) + '_'+ dt_string + '.xlsm')          # Sauvegarde
             else:
                 self.excel.Visible = True                                                           # Affichage Excel
-                self.wb.SaveAs(PATH_FOLDER_PROD + str(firstOF) + '_' + str(lastOF) + '_'+ dt_string + '.xlsx')
+                self.wb.SaveAs(PATH_FOLDER_PROD + str(firstOF) + '_' + str(lastOF) + '_'+ dt_string + '.xlsm')
                                                                                                     # Sauvegarde
             
 
